@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Kontakt os</title>
+</head>
+<body id="scroll-to-top">
+    <!-- Navigation bar -->
+    <header class="mar-header">
+        <nav class="mar-navbar">
+            <a href="index.html" class="maravelo-logo"><img src="img/Maravelo.png" alt="Maravelo elcykler"></a>
+            <ul class="mar-nav-menu">
+                <li class="mar-nav-item">
+                    <a href="index.html" class="mar-nav-link mar-link-animation">Forside</a>
+                </li>
+                <li class="mar-nav-item">
+                    <a href="products.html" class="mar-nav-link mar-link-animation">Produkter</a>
+                </li>
+                <li class="mar-nav-item">
+                    <a href="about.html" class="mar-nav-link mar-link-animation">Om os</a>
+                </li>
+                <li class="mar-nav-item">
+                    <a href="contact.html" class="mar-nav-link active-link mar-link-animation">Kontakt</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Picture front page - button -->
+    <div class="front-page-container box-shadows">
+      <div class="about-contact-page-background">
+        <span class="arrow-down-about-contact"><a href="contact.html#Scroll-to-contactForm">&#x2039;</a></span>
+      </div>
+    </div>
+
+    <!-- Contact form - contact Maravelo text-->
+    <div class="form-space-container" id="Scroll-to-contactForm">
+      <div class="form-flex-container contact-flex"> 
+        <div class="small-text">
+          <h2><span class="red-text">Kontakt os</span> og bestil en prøvetid</h2>
+          <p>Er du interesseret i et af vores produkter og ønsker at komme og prøve det eller have en snak 
+            omkring det med en af vores ansatte?</p>
+            <br>
+          <p>Så udfyld formularen, og så vender vi tilbage til dig hurtigst muligt.</p>
+          <br>
+          <h4>Andet info</h4>
+          <p>Addresse <i class="fas fa-home"></i> Bakkegårdsvej 106, 3050 Humlebæk, Denmark</p>
+          <br>
+          <p>Eller ring til <i class="fas fa-phone-alt"></i> tlf. nr. +45 60 94 60 95 indenfor vores åbningstid man-fre 8-16.</p>
+        </div>
+        <!-- Contact forn -->
+        <div class="form-container box-shadows">
+          <h2>Kontakt os</h2>
+          <div id="error_message"></div>
+          <form class="form" onsubmit="return validate();">
+            <input type="text" placeholder="Navn *" id="name" class="form-input">
+            <input type="text" placeholder="Telefon" id="phone" class="form-input">
+            <input type="text" placeholder="Email addresse *" id="email" class="form-input">
+            <input type="text" placeholder="Emne" id="subject" class="form-input">
+            <textarea placeholder="Besked *" id="message"></textarea>
+            <input type="submit" class="form-button box-shadows">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- long and square banner for rains -->
+    <div class="long-banner-container">
+      <iframe class="long-banner" src="banner-ads/rains/index.html" frameborder="0"></iframe>
+      <iframe class="rains-small" src="banner-ads/rainsKvadrat/index.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- Go to top -->
+    <div class="scroll-to-top-container">
+      <div class="scroll-to-top-arrow">
+          <a href="contact.html#scroll-to-top">&#x27A4;</a>
+      </div>
+  </div>
+
+    <!-- Footer area - Footer and SVG-->
+    <svg viewBox="0 -40 700 110"  preserveAspectRatio="none">
+      <path d="M0, 0 c80,-22 200,-12 350, 25 c90, 17 260, 7.5 350, -20 v100 h-700z" />
+  </svg>
+  <footer class="footer-container">
+      <h2>#Maravelo</h2>
+      <h4>Maravelo elcykler</h4>
+
+      <div class="footer-content">
+        <div class="footer-img-container">
+          <a href="https://www.facebook.com/mymaravelo/" target="_blank"><img src="img/facebook-black.png" alt="Maravelo facebook følgere" class="small-footer-img"></a>
+          <a href="https://www.youtube.com/channel/UClc_JPw4MoMq8nz-RBCwXEg" target="_blank"><img src="img/youtube-black.png" alt="Maravelo youtube følgere" class="small-footer-img"></a>
+          <a href="https://www.instagram.com/maravelo.eu/" target="_blank"><img src="img/instagram-black.png" alt="Maravelo instagram følgere" class="small-footer-img"></a>
+        </div>
+        <div>
+          <p><b>Addresse:</b> Bakkegårdsvej 106, 3050 Humlebæk, Denmark</p>
+          <p><b>Telefon nr.:</b> +45 60 94 60 95</p>
+          <p><b>Kontakt</b> via <a href="contact.html">kontaktformularen</a></p>
+        </div>
+        <div>
+          <a href="index.html"><img src="img/Maravelo.png" alt="Maravelo elcykler" class="footer-logo"></a>
+        </div>
+      </div>
+  </footer> 
+
+
+  <script src="javascript/navigation.js"></script>
+  <script src="javascript/contactForm.js"></script>
+
+</body>
+</html>

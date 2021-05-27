@@ -1,0 +1,1429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Ariel', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* START MENU BAR */
+.mar-header{
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0);
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mar-navbar ul {
+  margin: 0 !important;
+}
+
+.mar-navbar {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 100% !important;
+}
+
+.mar-nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s;
+  background-color: #efefef;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.mar-nav-menu.active {
+  left: 0;
+}
+
+.mar-nav-item {
+  line-height: 90px;
+  text-align: center;
+  list-style: none !important;
+}
+
+.mar-nav-link{
+  font-size: 22px;
+  font-weight: 400;
+  color: #4e4e4e !important;
+  display: block !important;
+  text-decoration: none !important;
+}
+
+.maravelo-logo, .maravelo-logo img {
+  display: none;
+}
+
+/* Animation on links on hover in navigation */
+a.mar-link-animation {
+  position: relative;
+}
+
+a.mar-link-animation:before {
+  content: "";
+  position: absolute;
+  margin-left: 25%;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4e4e4e;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out;
+}
+
+a.mar-link-animation:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  left: 80vw;
+}
+
+/* Tells the user what pages they are currently on */
+.active-link {
+  font-weight: 600;
+}
+
+/* the X in the burger menu */
+.bar {
+  display: block;
+  width: 35px;
+  height: 4px;
+  position: relative;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #4e4e4e;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+/* END NAVIGATION END NAVIGATION */
+
+/* BASIC ELEMENTS PRESENT ON MULTIPLE PAGES START */
+.box-shadows {
+    box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.6);
+}
+
+.white-text {
+  color: #fff !important;
+}
+
+.red-text  {
+  color: #C92835;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;
+  padding-bottom: 1vh;
+}
+
+.text-container h3, .text-container h2 {
+  margin-bottom: 2vh;
+  width: 80%;
+  margin-top: 8vh;
+}
+
+.text-container p {
+  width: 80%;
+}
+
+.text-container a{
+  color: #000;
+}
+.text-container a:hover{
+  color: #609b59;
+}
+
+.about-contact-page-background {
+  background-image: url(../img/frontpagePicture1.png);
+  width: 100%;
+  height: 65vh;
+  background-position: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Arrow down on images */
+.arrow-down a, .arrow-down-about-contact a{
+  position: absolute;
+  font-size: 110px;
+  color: #fff;
+  left: 48%;
+  bottom: 10vh;
+  transform: rotate(-90deg);
+  text-decoration: none;
+  z-index: 100;
+}
+
+.arrow-down a {
+  bottom: 10vh;
+}
+
+.arrow-down-about-contact a {
+  bottom: 33vh;
+}
+
+.arrow-down a:hover, .arrow-down-about-contact a:hover {
+  color: #efefef;
+}
+/* BASIC ELEMENTS PRESENT ON MULTIPLE PAGES END */
+
+/* BUTTONS BUTTONS BUTTONS START */
+/* Buttons on images */
+.specification-button {
+  position: relative;
+  top: 80%; 
+  box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.6);
+  transition: 0.4s;
+}
+
+.specification-button, .button-on-image {
+  color: #125A0A;
+  background-color: #A8E1A2;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  z-index: 10;
+  box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.6);
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.button-on-image a {
+  text-decoration: none;
+  color: #125A0A;
+}
+
+.button-on-image a:hover {
+  color: #125A0A;
+}
+
+.button-on-image:hover, .specification-button:hover {
+  transition: 0.4s;
+  cursor: pointer;
+  color: #0a4704;
+  background-color: #609b59;
+}
+
+/* Button, planning and ordering a time to visit the shop - links to contact */
+.see-bike-button {
+  background-color: #5e5e5e; 
+  border: none;
+  padding: 12px ;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.see-bike-button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.see-bike-button:hover {
+  background-color: #4e4e4e;
+}
+
+/* sign up and send buttons */
+.form-button{
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 80%;
+  background-color: #5e5e5e;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
+  transition: 0.4s;
+}
+
+.form-button:hover {
+  background-color: #4e4e4e;
+  transition: 0.4s;
+}
+/* BUTTONS BUTTONS BUTTONS END */
+
+
+/* three items in container - counter on About page and buy guide on Product page  */
+.three-intro-space-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.three-intro-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.three-intro-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 45vw;
+  text-align: center;
+}
+
+.counter {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.counter-img {
+  width: 70px;
+}
+
+.youtube-counter {
+  padding-bottom: 1.5vh;
+}
+
+/* FORMS START - contact form on Contact page and sign up to email on product page */
+.form-space-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 5vh;
+}
+
+.form-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 50px;
+}
+
+.form-container {
+  width: 100%;
+  background: #efefef;
+  padding: 25px;
+  border-radius: 5px;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h3{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-input, textarea {
+  width: 90%;
+  margin: 10px 0;
+  font-family: 'Poppins', 'Open Sans' sans-serif !important;
+  padding: 10px 10px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container textarea{
+  height: 80px;
+  margin-top: 10px;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+#error_message, #signUpError_message {
+  color: #df292f;
+  text-align: center;
+}
+/* FORMS END */
+
+/* Scroll to top arrow start*/
+.scroll-to-top-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+}
+
+.scroll-to-top-arrow {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+}
+
+.scroll-to-top-arrow a{
+  text-decoration: none;
+  color: #B75D5D;
+  font-size: 40px;
+  transition: 0.4s;
+  transform: rotate(-90deg);
+}
+
+.scroll-to-top-arrow a:hover{
+  text-decoration: none;
+  color: #974949;
+  font-size: 45px;
+  transition: 0.4s;
+}
+/* scroll to top end */
+
+/* Footer styling start*/
+svg {
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: -20px;
+  fill: #c0c0c0;
+}
+
+footer {
+  height: 530px;
+  width: 100%;
+  background-color: #c0c0c0;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 40px !important;
+  font-weight: 500 !important;
+  padding-top: 25px;
+}
+
+footer h4 {
+  font-size: 22px !important;
+  font-weight: 500 !important;
+}
+
+.footer-content {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-img-container {
+  display: flex;
+  width: 42vw;
+  justify-content: space-between;
+}
+.footer-content p {
+  width: 50vw;
+}
+
+.footer-content > div {
+  margin: 10px 0;
+}
+
+.small-footer-img {
+  height: 50px;
+}
+
+.footer-logo {
+  width: 50vw;
+}
+
+footer p a {
+  color: #4e4e4e;
+}
+
+footer p a:hover {
+  color: #609b59;
+}
+
+/* Footer styling end */
+
+
+
+/* INDEX.HTML FRONT PAGE START, FRONT PAGE START */
+/* Front page, big picture, text on image and button on image */
+.front-page-container p {
+  color: #919191;  
+}
+
+.frontpage-img {
+  background-position: 60%;
+  background-image:url("../img/fronpagePicture.png");
+  width:100%; 
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text-on-img {
+  z-index: 10;
+  padding-top: 13vh;
+  padding-left: 10vw;
+  color: #4e4e4e;
+}
+
+.text-on-img h1 {
+  font-weight: 400;
+  font-size: 35px;
+  margin-bottom: 2vh;
+}
+
+.text-on-img p {
+  font-size: 23px;
+}
+
+/* Five facts Index */
+.five-facts-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 50px 0px;
+  text-align: center;
+}
+
+.five-facts-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+
+.five-facts {
+  width: 180px;
+  height: 180px;
+  padding: 10px;
+  margin: 5px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.five-fact-header {
+  text-align: center;
+  padding: 75px 0 20px 0;
+}
+
+.five-facts p {
+  font-weight: 600;
+  font-size: 27px;
+  margin: 0;
+  padding: 5px 10px;
+  color:#609b59;
+}
+
+/* HTML banner ads with text, banner-text-banner area */
+.banner-text-banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-banner-phone {
+    display: none;
+}
+
+.banner-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.banners {
+    width: 320px;
+    height: 300px;
+    margin: 5vh 0 0 0;
+}
+
+.text-banner-text {
+  width: 80%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text on picture slider */
+.text-on-slider {
+  position: absolute !important;
+  z-index: 100;
+  top: 25% !important;
+  padding-left: 10vw !important;
+  color: white;
+  font-weight: 400;
+}
+
+/* Our favourite ebike */
+.ourFavourite {
+  width: 100%;
+  min-height: 600px;
+  background-image: url(../img/ourFavourite.png);
+  background-position-y: 70%;
+  background-position-x: 45%;
+  background-repeat: no-repeat;
+}
+
+
+/* Follow us on instagram. instagram squares */
+.instagram-space-container {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-container {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;    
+}
+
+.instagram-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.instagram-box {
+    width: 25vw;
+    height: 25vw;
+    margin: 0 10px 10px 0;
+}
+
+.instagram-img {
+    width: 100%;
+    height: 100%;
+}
+/* INDEX.HTML FRONT PAGE END, FRONT PAGE END */
+
+
+
+
+/* PRODUCT PAGE START - ITEMS ONLY ON PRODUCT PAGE START*/
+.video-container {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+/* Low images */
+.low-img1, .low-img2, .low-img3, .low-img4, .low-img5 {
+  background-position-x: 35% ;
+  width: 100%; 
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 4vh;
+}
+
+.low-img1 {
+  background-image: url(../img/products/longRosso.png);
+}
+
+.low-img2 {
+  background-image: url(../img/products/longYellow.png);
+}
+
+.low-img3 {
+  background-image: url(../img/products/longWhite.png);
+}
+
+.low-img4 {
+  background-image: url(../img/products/longUrban.png);
+}
+
+.low-img5 {
+  background-image: url(../img/products/longHelmet.png);
+  background-position-x: 50%;
+}
+
+/* show all products start */
+.show-more-container {
+  width: 80vw;
+  margin-left: 9vw;
+  padding-top: 5vh;
+}
+
+.more-items {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
+.more-items img {
+  width: 100%;
+  box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.6);
+  transition: 0.3s;
+}
+
+.more-items img:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.more-items p {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.show-more-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show-more-button {
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 5vh 0;
+  background-color: #5e5e5e;
+  padding: 15px;
+  box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.6);
+  color: #fff;
+  transition: 0.4s;
+}
+
+.show-more-button:hover {
+  cursor: pointer;
+  background-color: #4e4e4e;
+  transition: 0.4s;
+}
+
+.show-more-button a {
+  color: #fff;
+  text-decoration: none;
+}
+.show-more-button a:hover {
+  color: #fff;
+}
+
+
+/* The Modal (background) */
+.specification-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specification-modal {
+  display: none; /* Hidden by default */
+  z-index: 10; /* Sit on top */
+  width: 320px;
+  height: 390px;
+  position: relative;
+}
+
+/* Modal Content/Box */
+.specification-modal-content {
+  background-color: #fefefe;
+  padding: 12px 20px;
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 100%;
+  border-radius: 10px;
+  line-height: 23px;
+  font-size: 15px;
+}
+
+/* The Close sigb */
+.spec-close-style {
+  color: #aaa;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.spec-close-style:hover,
+.spec-close-style:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* App on products */
+.app-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px 0;
+}
+
+.app-colum-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-colums {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-colums img {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.app-colums img:hover {
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.app-colums p {
+  padding: 20px 0px 50px 0px;
+}
+/* PRODUCT PAGE END - ITEMS ONLY ON PRODUCT PAGE END*/
+
+
+/* ABOUT US PAGE START - ITEMS ONLY ON ABOUT PAGE START*/
+.about-us-space-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-container {
+  width: 80%;
+  margin: 11vh 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-text, .about-us-image{
+  width: 100%;  
+}
+
+.about-us-image {
+  margin-top: 40px;
+}
+
+.about-us-image img{
+  width: 100%;  
+}
+
+.statistic-bikes {
+  padding: 20px 0 0 20px;
+}
+
+.statistic-bikes a {
+  color: black;
+}
+
+.statistic-bikes a:hover {
+  color: #609b59;
+}
+/* ABOUT US PAGE END - ITEMS ONLY ON ABOUT PAGE END*/
+
+/* CONTACT PAGE START */
+.long-banner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.long-banner {
+  display: none;
+  height: 280px;
+  width: 700px;
+}
+
+.rains-small {
+  height: 250px;
+  width: 300px;
+}
+
+/* CONTACT PAGE END */
+/*SPECIFIC PAGES TO ALL THE BIKES AND MERCHANDISE START  */
+.bike-page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 50px 9vw;
+  width: 80vw;
+}
+
+.bike-page-text-container {
+  padding: 20px 0;
+}
+
+.bike-page-flex {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.bike-page-text, .bike-page-list {
+  width: 100%;
+}
+
+.stuff-u-might-like {
+  width: 80vw;
+  margin-left: 9vw;
+}
+
+.stuff-u-might-like img{
+  width: 80vw;
+  transition: 0.4s;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.stuff-u-might-like img:hover {
+  opacity: 0.6;
+  transition: 0.4s;
+}
+/*SPECIFIC PAGES TO ALL THE BIKES AND MERCHANDISE END */
+
+
+
+@media screen and (min-width: 800px) {
+  p {
+    font-size: 17px;
+  }
+
+  /* Navigation bar, logo and nav */
+  .mar-navbar {
+    padding: 0 50px ;
+    width: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh !important;
+  }
+
+  .mar-nav-menu {
+      display: inline-block;
+      display: flex;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-direction: row;
+      left: 0;
+      position: relative;
+      width: 60vw;
+      box-shadow: none;
+      padding: 0 !important;
+      height: 50px !important;
+  }
+
+  .mar-nav-item {
+      display: inline-block;
+      margin: 0;
+  }
+
+  .mar-nav-link {
+      display: inline-block;
+      width: a;
+      padding: 0 !important;
+      margin: 0 !important;
+      line-height: 50px ;
+  }
+
+  .maravelo-logo {
+      width: 25vw;
+      display: block !important;
+  }
+
+  .maravelo-logo img {
+      width: 100%;
+      padding: 0 50px 0 0 !important;
+      display: block;
+  }
+
+  a.link-animation:before {
+      margin-left: 0;
+      width: 10%;
+  }
+
+  .hamburger {
+      display: none;
+  }
+
+  .bar {
+      display: none;
+  }
+
+  /* BASIC ELEMENTS START */
+  .text-on-img {
+    padding-left: 15vw;
+    padding-top: 20vh;
+  }
+
+  /* Text containers */
+  .text-container h3 , .text-container h2{
+    width: 57%;
+  }
+
+  .text-container p {
+    width: 57%;
+  }
+  /* BASIC ELEMENTS END */
+
+  /* FORMS START*/
+  .form-flex-container {
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .form-container {
+    margin: 0 ;
+    width: 55%;
+  }
+
+  .specification-img-container {
+    padding-left: 40%;
+  }
+
+  .specification-modal-content p {
+    font-size: 16px;
+  }
+
+  /* FORMS END */
+
+  /* Three intro sections on ABOUT page and PRODUCT page */
+  .three-intro-flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+  }
+
+  .three-intro-wide {
+    width: 70%;
+  }
+
+  .three-intro-container {
+    margin: 40px 0px;
+  }
+
+  .buy-guide-text {
+    padding: 15px;
+  }
+
+  .buy-guide-text span {
+    font-size: 27px;
+  }
+
+  /* INDEX.HTML FRONT PAGE 800 MEDIA FRONT PAGE START */
+  .five-facts-flex-container {
+    width: 92%;
+    justify-content: space-around;
+  }
+
+
+  /* HTML Banners, group, and text between */
+  .banner-group {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Five facts on index */
+  .banners {
+    margin: 0;
+  }
+
+  .text-banner-text {
+    width: 57%;
+  }
+
+  .instagram-container {
+    width: 57%;
+  }
+
+  .instagram-box {
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .instagram-link {
+    transition: 0.4s;
+  }
+
+  .instagram-link:hover {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+  /* INDEX.HTML FRONT PAGE 800 MEDIA FRONT PAGE END */
+
+  /* PRODUCT PAGE 800 PRODUCT FRONT PAGE START */  
+  video {
+    margin-top: 5vh;
+  }
+
+  /* Show all products toggle button */
+  .show-more-container  {
+    width: 61vw;
+    margin-left: 19vw;
+  }
+
+  .more-items {
+    width: 45%;
+    display: inline-block;
+    margin: 0 2% 5vh 2%;
+  }
+
+  /* App containers on product site */
+  .app-colum-container {
+    width: 57%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .app-colums {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-colums img {
+    width: 100%;
+  }
+  /* PRODUCT PAGE 800 PRODUCT FRONT PAGE END */
+
+  /* ABOUT US PAGE START */
+  .about-us-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .about-us-text, .about-us-image{
+    width: 47%;  
+  }
+
+  .about-us-image {
+    margin-top: 0;
+  }
+
+  .small-text {
+    width: 42%;  
+  }
+  /* ABOUT US PAGE END */ 
+
+  /* CONTACT PAGE START */
+  .long-banner {
+    display: block;
+  }
+  .rains-small {
+    display: none;
+  }
+
+/* CONTACT PAGE END */
+
+  /* BIKE PAGE - SPECIFIC PRODUCT PAGES START*/
+  .bike-page-container {
+    justify-content: space-between;
+  }
+
+  .bike-page-text-container {
+    padding: 0;
+  }
+
+  .bike-page-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bike-page-text, .bike-page-list {
+    width: 46%;
+  } 
+
+  .stuff-u-might-like-images {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+
+  .stuff-u-might-like-images a img{
+    width: 20vw;
+    transition: 0.4s;
+    margin-bottom: 20px;
+  }
+
+  .stuff-u-might-like img:hover {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+  /* BIKE PAGE - SPECIFIC PRODUCT PAGES END*/
+
+  /* Footer */
+  footer {
+    height: 470px;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer-img-container {
+    width: 22vw;
+    justify-content: center;
+  }
+
+  .footer-content p {
+    width: 15vw;
+  }
+
+  .small-footer-img {
+    padding: 0 15px;
+    height: 60px;
+  }
+
+  .footer-logo {
+    width: 22vw;
+  }
+}
+
+
+@media screen and (min-width: 1250px) {
+  /* Navigation bar */
+  .maravelo-logo {
+    width: 15vw !important;
+  }
+
+  .mar-nav-menu {
+    width: 38vw;
+  }
+
+  .mar-nav-link {
+    width: 8vw;
+  }
+
+  /* BASIC ELEMENTS START */
+  /* Text and button on image */
+  .text-on-img, .text-on-slider {
+    padding-left: 28.8vw !important;
+  }
+
+  /* Text containers */
+  .text-container h3, .text-container h2 {
+    width: 42%;
+  }
+  
+  .text-container p {
+    width: 42%;
+  }
+
+  /* FORMS */
+  .contact-flex {
+    width: 50%;
+  }
+
+  .sign-up-flex {
+    width: 42%;
+  }
+
+  .form-container {
+    margin: 0;
+    width: 55%;
+  }
+
+  /* specification button */
+  .specification-img-container {
+    padding-left: 30%;
+  }
+
+  .sign-up-container {
+    flex-direction: row;
+    width: 42%;
+  }
+  /* BASIC ELEMENTS END */
+
+  /* INDEX.HTML FRONT PAGE 1250 MEDIA FRONT PAGE START */
+  .five-facts  {
+    width: 210px;
+    height: 210px;
+    margin: 5px 20px;
+  }
+
+
+  /* HTML banners and text between */
+  .banner-text-banner-container {
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-start; 
+  }
+  
+  .banner-group {
+    width: 320px;
+    margin-left: 7vw;
+  }
+
+  .text-banner-text {
+    width: 42%;
+  }
+
+  .text-banner-text h2, .text-banner-text p {
+    width: 100%;
+    margin: 0;
+  }
+
+  .banner-group {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 710px;
+    margin-top: 5vh;
+  }
+
+  .banners {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hide-banner-phone {
+    display: block;
+    width: 310px;
+    height: 710px;
+    margin: 5vh 7vw 5vh 0;
+  }
+  
+  /* Instagram squares, boxes and images 1250*/
+  .instagram-container {
+    width: 42%;
+  }
+
+  .instagram-box {
+    width: 13vw;
+    height: 13vw;
+  }
+  /* INDEX.HTML FRONT PAGE 800 MEDIA FRONT PAGE END */
+
+  /* PRODUCT PAGE 800 MEDIA PRODUCT PAGE START */
+  /* Show more products */
+  .show-more-container  {
+    width: 43vw;
+    margin-left: 28vw;
+  }
+
+  /* App 1250 */
+  .app-colum-container {
+    width: 42%;
+  }
+  /* PRODUCT PAGE 800 MEDIA PRODUCT PAGE END */
+
+  /* ABOUT US PAGE START - ITEMS ONLY ON ABOUT US PAGE START */
+  /* About us 1250 */
+  .about-us-container {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  /* Counter on about page */
+  .three-intro-flex-container {
+    width: 42%;
+  }
+
+  .three-intro-wide {
+    width: 50%;
+    justify-content: space-between;
+  }
+  /* ABOUT US PAGE END - ITEMS ONLY ON ABOUT US PAGE END */
+
+  /*SPECIFIC PAGES TO ALL THE BIKES AND MERCHANDISE START  */
+  .bike-page-container {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 50px 9vw;
+    width: 80vw;
+  }
+
+  .bike-page-text-container {
+    width: 40%;
+  }
+  .bike-page-flex {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .bike-page-text, .bike-page-list {
+    width: 100%;
+  }
+
+  .stuff-u-might-like {
+    width: 80vw;
+  }
+  .stuff-u-might-like img{
+    transition: 0.4s;
+    margin-bottom: 20px;
+  }
+
+  .stuff-u-might-like img:hover {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+  /*SPECIFIC PAGES TO ALL THE BIKES AND MERCHANDISE END  */
+}
+
+
+@media screen and (min-width: 1600px) {
+  /* Navigation bar */
+  nav {
+    left: 40vw;
+  }
+
+  nav ul li a {
+    padding: 0 25px;
+    font-size: 20px;
+  }
+  /* INDEX START */
+  .text-on-img h1 {
+    font-size: 40px;
+  }
+  /* Five facts on index */
+  .frontpage-img {
+    background-position: 60% -70px;
+  }
+
+
+    /* INDEX END */
+
+  /* PRODUCT START */
+  /* App container on product page */
+  .app-colum-container {
+    width: 42%;
+  }
+    /* PRODUCT END */
+
+}

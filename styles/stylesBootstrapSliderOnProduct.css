@@ -1,0 +1,41 @@
+.carousel {
+    width: 80vw !important;
+    height: 260px !important;
+    margin-bottom: 50px;
+  }
+  .carousel-item {
+    width: 80vw !important;
+    height: 260px !important;
+  }
+  
+  
+  .carousel-item img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 800px) {
+    .carousel {
+      width: 80vw !important;
+      height: 50vw !important;
+    }
+    .carousel-item {
+      width: 80vw !important;
+      height: 50vw !important;
+    }
+  }
+
+
+  @media screen and (min-width: 1250px) {
+  .carousel {
+    width: 42vw !important;
+    height: 27vw !important;
+  }
+  .carousel-item {
+    width: 42vw !important;
+    height: 27vw !important;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+  }
+  }
